@@ -1,0 +1,2 @@
+# Kogucik
+platforma do gier
