@@ -1,1 +1,3 @@
-To najlepsza platfroma fo gier powstała w tej organizacji
+Kogucik
+
+To najlepsza platfroma do gier powstała w tej organizacji
