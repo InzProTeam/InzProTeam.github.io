@@ -56,17 +56,17 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButtonUserLogin" runat="server">Zaloguj się</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButtonUserLogin" CausesValidation="False" runat="server" OnClick="LinkButtonUserLogin_Click">Zaloguj się</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link " ID="LinkButtonSignUp" runat="server">Zarejestruj się</asp:LinkButton>
+                            <asp:LinkButton class="nav-link " ID="LinkButtonSignUp" runat="server" OnClick="LinkButtonSignUp_Click">Zarejestruj się</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButtonLogout" runat="server">Wyloguj się</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButtonLogout" runat="server" OnClick="LinkButtonLogout_Click" Visible="False">Wyloguj się</asp:LinkButton>
                         </li>
  
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButtonHelloUser" runat="server">Siema koguciku</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButtonHelloUser" runat="server" OnClick="LinkButtonHelloUser_Click" Visible="False">Siema koguciku</asp:LinkButton>
                         </li>
                     </ul>
                  </div>
@@ -86,10 +86,10 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                         <p>
-                            <asp:LinkButton class="footerlinks" ID="LinkButtonAdminLogin" runat="server">Admin</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButtonAdminLogin" CausesValidation="False" runat="server" OnClick="LinkButtonAdminLogin_Click">Admin</asp:LinkButton>
                             &nbsp;
                            
-                            <asp:LinkButton class="footerlinks" ID="LinkButtonMember" runat="server">Zarządzania użytkownikiem</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButtonMember" runat="server" OnClick="LinkButtonMember_Click" Visible="False">Zarządzania użytkownikiem</asp:LinkButton>
                         </p>
  
                     </div>
