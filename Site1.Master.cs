@@ -13,5 +13,36 @@ namespace InzProWeb
         {
 
         }
+
+        protected void LinkButtonMember_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void LinkButtonUserLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userlogin.aspx");
+
+        }
+
+        protected void LinkButtonSignUp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
+
+        protected void LinkButtonLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonHelloUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonAdminLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminlogin.aspx");
+        }
     }
 }
