@@ -45,11 +45,13 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <asp:Button  class="btn btn-info btn-block btn-lg" ID="ButtonSingIn" runat="server" Text="Zaloguj się"></asp:Button>
+                                    <asp:Button  class="btn btn-info btn-block btn-lg" ID="ButtonSingIn" runat="server" Text="Zaloguj się" OnClick="ButtonSingIn_Click"></asp:Button>
                                 </div>
 
                                 <div class="form-group">
-                                    <input  class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUpIn" type="button" value="Zarejestruj się"/>
+                                    <a href="SignUp.aspx">
+                                        <input  class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUpIn" type="button" value="Zarejestruj się"/>
+                                    </a>
                                 </div>
                             </div>
                         </div>

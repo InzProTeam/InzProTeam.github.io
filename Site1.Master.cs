@@ -11,7 +11,49 @@ namespace InzProWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["role"].Equals(""))
+                {
+                    LinkButtonSignUp.Visible = true;
+                    LinkButtonUserLogin.Visible = true;
 
+                    LinkButtonLogout.Visible = false;
+                    LinkButtonHelloUser.Visible = false;
+
+                    LinkButtonMember.Visible = false;
+                    LinkButtonAdminLogin.Visible = true;
+
+                }
+                else if (Session["role"].Equals("user"))
+                {
+                    LinkButtonSignUp.Visible = false;
+                    LinkButtonUserLogin.Visible = false;
+
+                    LinkButtonLogout.Visible = true;
+                    LinkButtonHelloUser.Visible = true;
+                    LinkButtonHelloUser.Text = "Siema koguciku " + Session["username"].ToString();
+
+                    LinkButtonMember.Visible = false;
+                    LinkButtonAdminLogin.Visible = true;
+                }
+                else if (Session["role"].Equals("admin"))
+                {
+                    LinkButtonSignUp.Visible = false;
+                    LinkButtonUserLogin.Visible = false;
+                    LinkButtonHelloUser.Text = "Witaj nadkogucie " + Session["username"].ToString();
+
+                    LinkButtonLogout.Visible = true;
+                    LinkButtonHelloUser.Visible = true;
+
+                    LinkButtonMember.Visible = true;
+                    LinkButtonAdminLogin.Visible = false;
+                }
+            }
+            catch (Exception exception)
+            {
+              
+            }
         }
 
         protected void LinkButtonMember_Click(object sender, EventArgs e)
@@ -32,7 +74,18 @@ namespace InzProWeb
 
         protected void LinkButtonLogout_Click(object sender, EventArgs e)
         {
+            Session["username"] ="";
+            Session["role"] = "";
+            Session["status"] = "";
+            LinkButtonSignUp.Visible = true;
+            LinkButtonUserLogin.Visible = true;
 
+            LinkButtonLogout.Visible = false;
+            LinkButtonHelloUser.Visible = false;
+
+            LinkButtonMember.Visible = false;
+            LinkButtonAdminLogin.Visible = true;
+            Response.Redirect("WebForm1.aspx");
         }
 
         protected void LinkButtonHelloUser_Click(object sender, EventArgs e)
