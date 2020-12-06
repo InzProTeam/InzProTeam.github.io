@@ -49,9 +49,9 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <a href="SignUp.aspx">
-                                        <input  class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUpIn" type="button" value="Zarejestruj się"/>
-                                    </a>
+                                   
+                                    <asp:Button   class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUpIn" runat="server" Text="Zarejestruj się" OnClick="ButtonSingUpIn_Click"></asp:Button>
+                                   
                                 </div>
                             </div>
                         </div>

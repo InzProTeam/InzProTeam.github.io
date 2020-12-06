@@ -53,5 +53,10 @@ namespace InzProWeb
                 Response.Write("<script>alert('" + ex.Message + ".');</script>");
             }
         }
+
+        protected void ButtonSingUpIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
     }
 }
