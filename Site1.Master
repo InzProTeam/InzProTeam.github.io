@@ -45,7 +45,7 @@
                             <a class="nav-link" href="homepage.aspx">Strona główna</a><%--Pamietaj zeby zmienic homepaage.aspx na prawdziwą--%>
                         </li>
                         <li class="nav-item active ">
-                            <a class="nav-link" href="#">O nas</a>
+                            <a class="nav-link" href="AboutUs.aspx">O nas</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="WebFormFAQ.aspx">FAQ U</a>
