@@ -37,7 +37,7 @@
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBoxUserIDUp" runat="server" placeholder="Nazwa użytkownika"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorUser" runat="server" Display="Dynamic"
-                                                                ControlToValidate="TextBoxUserIDUp" ErrorMessage="To pole nie może być puste."></asp:RequiredFieldValidator>
+                                                                ControlToValidate="TextBoxUserIDUp" ForeColor="red" ErrorMessage="To pole nie może być puste."></asp:RequiredFieldValidator>
                                 </div>
 
                                 <label>Hasło</label>
@@ -45,7 +45,7 @@
                                     <asp:TextBox CssClass="form-control" ID="TextBoxPasswordUp" runat="server" placeholder="Hasło" TextMode="Password"></asp:TextBox>
                                     <asp:CompareValidator ID="CompareValidatorPassword" runat="server" Display="Dynamic" 
                                                           ControlToCompare="TextBoxPasswordUp" ControlToValidate="TextBoxConfirmPasswordUp" 
-                                                          ErrorMessage="Hasła do siebie nie pasują."></asp:CompareValidator>
+                                                          ForeColor="red" ErrorMessage="Hasła do siebie nie pasują."></asp:CompareValidator>
                                    
                                 </div>
 
@@ -53,7 +53,7 @@
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBoxConfirmPasswordUp" runat="server" placeholder="Potwierdź hasło" TextMode="Password"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorConfirmPassword" runat="server" Display="Dynamic"
-                                                                ControlToValidate="TextBoxConfirmPasswordUp" ErrorMessage="To pole nie może być puste."></asp:RequiredFieldValidator>
+                                                                ForeColor="red" ControlToValidate="TextBoxConfirmPasswordUp" ErrorMessage="To pole nie może być puste."></asp:RequiredFieldValidator>
                                   
                                
                                 </div>
@@ -62,14 +62,15 @@
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBoxEmailUp" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" Display="Dynamic"
-                                                                ControlToValidate="TextBoxEmailUp" ErrorMessage="To pole nie może być puste."></asp:RequiredFieldValidator>
+                                                                ForeColor="red"  ControlToValidate="TextBoxEmailUp" ErrorMessage="To pole nie może być puste."></asp:RequiredFieldValidator>
                                 </div>
 
                                 <label>Data urodzenia</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBoxDate" runat="server" placeholder="Wprowadź date" TextMode="Date"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorBirthday" runat="server" Display="Dynamic"
-                                                                ControlToValidate="TextBoxDate" ErrorMessage="To pole nie może być puste."></asp:RequiredFieldValidator>
+                                                                ForeColor="red" ControlToValidate="TextBoxDate" ErrorMessage="To pole nie może być puste."></asp:RequiredFieldValidator>
+                                    
                                 </div>
 
                                 <div class="form-group">

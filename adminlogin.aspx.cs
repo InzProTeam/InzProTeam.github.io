@@ -43,7 +43,7 @@ namespace InzProWeb
 
                 }
                 else
-                {
+                { 
                     Response.Write("<script>alert('Nie poprawna nazwa użytkownika lub hasło.');</script>");
                 }
             }

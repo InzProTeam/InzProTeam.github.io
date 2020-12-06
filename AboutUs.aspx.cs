@@ -13,5 +13,15 @@ namespace InzProWeb
         {
 
         }
+
+        protected void ButtonSingIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userlogin.aspx");
+        }
+
+        protected void ButtonSingUp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
     }
 }

@@ -136,11 +136,11 @@
                         <div class="col-md-5">
                             <h5>Podoba Ci się nasza strona? Zostań z nami na dłużej!</h5>
                             <div class="form-group">
-                                    <asp:Button  class="btn btn-info btn-block btn-lg" ID="ButtonSingIn" runat="server" Text="Zaloguj się"></asp:Button>
+                                    <asp:Button  class="btn btn-info btn-block btn-lg" ID="ButtonSingIn" runat="server" Text="Zaloguj się" OnClick="ButtonSingIn_Click"></asp:Button>
                                 </div>
 
                                 <div class="form-group">
-                                    <input  class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUpIn" type="button" value="Zarejestruj się"/>
+                                    <asp:Button   class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUp" runat="server"  Text="Zarejestruj się" OnClick="ButtonSingUp_Click"></asp:Button>
                                 </div>
                         </div>
                         <div class="col-7 fa-6x">
