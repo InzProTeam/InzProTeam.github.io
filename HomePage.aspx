@@ -7,7 +7,7 @@
     <div class="container">
         <div class="container-fluid badge-info pt-3 pb-3 mt-md-2">
             <center>
-                <img src="imgs/game.png" class="img-fluid" alt="" />  
+                <img src="imgs/gameB.png" class="img-fluid" alt="" />  
           </center>
         </div>
 
@@ -27,7 +27,7 @@
                         <div class="img-text-game">
                             <div class="logo-game p-5">
                                 <center>
-                                    <img src="imgs/tic-tac-toe.svg" alt=""/>  
+                                    <img src="imgs/tic-tac-toeB.svg" alt=""/>  
                                 </center>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                         <div class="img-text-game">
                             <div class="logo-game p-5">
                                 <center>
-                                    <img src="imgs/snake.svg" alt=""/>  
+                                    <img src="imgs/snakeB.svg" alt=""/>  
                                 </center>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                         <div class="img-text-game">
                             <div class="logo-game p-5">
                                 <center>
-                                    <img src="imgs/tetris.svg" alt=""/>  
+                                    <img src="imgs/tetrisB.svg" alt=""/>  
                                 </center>
                             </div>
                         </div>
@@ -101,5 +101,6 @@
 
             </div>
         </div>
+    </div>
     
 </asp:Content>
