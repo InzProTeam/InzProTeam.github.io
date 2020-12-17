@@ -6,71 +6,8 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<style>
-.accordion .card {
-	border-radius: 6px !important;
-	border: 1px solid #eceded !important;
-	margin-bottom: 5px;
-}
-.accordion .card .card-header {
-	background: #f9fafa;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	margin-bottom: 0;
-	font-family: "Lato", sans-serif;
-	border-radius: 6px 6px 0 0;
-	border-bottom: none;
-}
-.accordion .card-header:hover {
-	background: #ecf0f0;
-}
-.accordion .card-header h2 span {
-	float: left;
-	margin-top: 10px;
-}
-.accordion .card-header .btn {
-	color: #3659a2;
-	font-size: 1.04rem;
-	width: 100%;
-	text-align: left;
-	position: relative;
-	top: -2px;
-	font-weight: 800;
-	text-decoration:none;
-}
-.accordion .card-header i {
-	float: right;
-	font-size: 1.3rem;
-	font-weight: bold;
-	position: relative;
-	top: 5px;
-}
-.accordion .card-header .btn:hover {
-	color: #35589f;
-}
-.accordion .card-body {
-	color: #324353;
-	text-align: justify;
-	border-top: 1px solid #eceded;
-}
+<script src="js/expand.js"></script>
 
-</style>
-<script>
-    $(document).ready(function () {
-        // Add minus icon for collapse element which is open by default
-        $(".collapse.show").each(function () {
-            $(this).siblings(".card-header").find(".btn i").html("remove");
-            $(this).prev(".card-header").addClass("highlight");
-        });
-
-        // Toggle plus minus icon on show hide of collapse element
-        $(".collapse").on('show.bs.collapse', function () {
-            $(this).parent().find(".card-header .btn i").html("remove");
-        }).on('hide.bs.collapse', function () {
-            $(this).parent().find(".card-header .btn i").html("add");
-        });
-    });
-</script>
 <div class="container-xl">
 	<div class="row">
 		<div class="card badge-light" style="margin:20px 10px 20px 10px">
