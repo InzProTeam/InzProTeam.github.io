@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace InzProWeb
 {
@@ -12,8 +7,9 @@ namespace InzProWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             try
+            
             {
-                if (Session["role"].Equals(""))
+                if (string.IsNullOrEmpty((string)Session["role"]))
                 {
                     LinkButtonSignUp.Visible = true;
                     LinkButtonUserLogin.Visible = true;
@@ -58,7 +54,7 @@ namespace InzProWeb
 
         protected void LinkButtonMember_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("WebFormMemberManagement.aspx");
         }
 
         protected void LinkButtonUserLogin_Click(object sender, EventArgs e)
@@ -85,12 +81,13 @@ namespace InzProWeb
 
             LinkButtonMember.Visible = false;
             LinkButtonAdminLogin.Visible = true;
-            Response.Redirect("WebForm1.aspx");
+            Response.Redirect("HomePage.aspx");
         }
 
         protected void LinkButtonHelloUser_Click(object sender, EventArgs e)
         {
-
+            if(Session["role"].Equals("user"))
+            Response.Redirect("WebFormUserProfile.aspx");
         }
 
         protected void LinkButtonAdminLogin_Click(object sender, EventArgs e)

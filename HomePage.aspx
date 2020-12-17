@@ -1,54 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="InzProWeb.HomePage" %>
+﻿<%@ Page Title="Strona główna" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="InzProWeb.HomePage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <style>
-        .game-headline {
-    text-transform: uppercase;
-}
-
-    .game-headline a {
-        color: #292b2c;
-        transition: 0.5s;
-    }
-
-.social-media {
-    transition: 0.5s;
-    font-size: 70px;
-}
-
-    .social-media:hover {
-        font-size: 70px;
-        filter: brightness(70%);
-        transition: 0.5s;
-    }
-
-.game-img-background {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    transition: 0.5s;
-}
-
-.logo-game img {
-    opacity: 0;
-    width: 50%;
-    transition: 0.4s;
-}
-
-.game-img-background:hover .logo-game img {
-    opacity: 100;
-    transition: 0.5s;
-}
-
-.game-img-background:hover .logo-game {
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
-}
-    </style>
 
     <div class="container">
         <div class="container-fluid badge-info pt-3 pb-3 mt-md-2">
@@ -67,9 +22,9 @@
                     </div>
                 </div>
 
-               <div class="row">
+                <div class="row">
                     <div class="col-md-4 game-item">
-                        <div class="game-img-background" style="background-image: url('imgs/tic-tac-toe.jpg');></div>
+                        <div class="game-img-background" style ="background-image: url('imgs/tic-tac-toe.jpg'); ></div>
                         <div class="img-text-game">
                             <div class="logo-game p-5">
                                 <center>
@@ -82,7 +37,7 @@
                         </div>
                     </div>
 
-                   <div class="col-md-4 game-item">
+                    <div class="col-md-4 game-item">
                         <div class="game-img-background" style="background-image: url('imgs/snake.jpg');></div>
                         <div class="img-text-game">
                             <div class="logo-game p-5">
@@ -91,13 +46,13 @@
                                 </center>
                             </div>
                         </div>
-                       <div class="game-headline pt-md-1">
+                        <div class="game-headline pt-md-1">
                             <a href="#">Wąż</a>
                         </div>
                     </div>
 
-                   <div class="col-md-4 game-item">
-                        <div class="game-img-background" style="background-image: url('imgs/tetris.jpg');></div>
+                    <div class="col-md-4 game-item">
+                        <div class="game-img-background" style="background-image: url('imgs/tetris.jpg'); ></div>
                         <div class="img-text-game">
                             <div class="logo-game p-5">
                                 <center>
@@ -105,7 +60,7 @@
                                 </center>
                             </div>
                         </div>
-                       <div class="game-headline pt-md-1">
+                        <div class="game-headline pt-md-1">
                             <a href="#">Tetris</a>
                         </div>
                     </div>
@@ -121,10 +76,10 @@
                     <div class="col-md-5">
                         <h5>Podoba Ci się nasza strona? Zostań z nami na dłużej!</h5>
                         <div class="form-group">
-                            <asp:Button class="btn btn-info btn-block btn-lg" ID="ButtonSingIn" runat="server" Text="Zaloguj się"></asp:Button>
+                            <asp:Button class="btn btn-info btn-block btn-lg" ID="ButtonSingIn" runat="server" Text="Zaloguj się" OnClick="ButtonSingIn_Click"></asp:Button>
                         </div>
                         <div class="form-group">
-                            <input class="btn btn-secondary btn-block btn-lg" id="ButtonSingUpIn" type="button" value="Zarejestruj się" />
+                            <asp:Button class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUpIn" runat="server" Text="Zarejestruj się" OnClick="ButtonSingUpIn_Click" ></asp:Button>
                         </div>
                     </div>
                     <div class="col-md-7 fa-6x">
@@ -148,5 +103,5 @@
             </div>
         </div>
     </div>
-    
+
 </asp:Content>

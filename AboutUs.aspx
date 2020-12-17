@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="InzProWeb.AboutUs" %>
+﻿<%@ Page Title="O nas" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="InzProWeb.AboutUs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
 
-                     <%--<div class="row">
+                    <%--<div class="row">
                         <div class="col">
                             <center>
                                <h5>Naszym celem jest:</h5> 
@@ -63,13 +63,13 @@
                             <center>
                                 <i class="fas fa-user-clock fa-3x" ></i><br />
                                 Mile spędzony czas
-                            </center>            
+                            </center>
                         </div>
                         <div class="col-4">
                             <center>
                                 <i class="fas fa-gamepad fa-3x"></i><br />
                                 Dobra zabawa
-                            </center>                         
+                            </center>
                         </div>
                         <div class="col-4">
                             <center>
@@ -104,7 +104,7 @@
                             <div class="col-md-4">
                                 <center>
                             <img <%--width="250px"--%> src="imgs/PatrykGraca.png"  class="img-fluid" alt=""/>
-                            <p class="text-left pt-2"><b>Maksymilian Śreniawa</b><br />
+                            <p class="text-left pt-2"><b>Maksymilian Średniawa</b><br />
                                Wielki Kanclerz Republiki,
                                Mroczny Lord Sithów Imperator Galaktyki,
                                Przywódca Ostatecznego Porządku <br />
@@ -136,12 +136,12 @@
                         <div class="col-md-5">
                             <h5>Podoba Ci się nasza strona? Zostań z nami na dłużej!</h5>
                             <div class="form-group">
-                                    <asp:Button  class="btn btn-info btn-block btn-lg" ID="ButtonSingIn" runat="server" Text="Zaloguj się" OnClick="ButtonSingIn_Click"></asp:Button>
-                                </div>
+                                <asp:Button class="btn btn-info btn-block btn-lg" ID="ButtonSingIn" runat="server" Text="Zaloguj się" OnClick="ButtonSingIn_Click"></asp:Button>
+                            </div>
 
-                                <div class="form-group">
-                                    <asp:Button   class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUp" runat="server"  Text="Zarejestruj się" OnClick="ButtonSingUp_Click"></asp:Button>
-                                </div>
+                            <div class="form-group">
+                                <asp:Button class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUp" runat="server" Text="Zarejestruj się" OnClick="ButtonSingUp_Click"></asp:Button>
+                            </div>
                         </div>
                         <div class="col-7 fa-6x">
                             <center>
@@ -158,7 +158,7 @@
                            </center>
 
                         </div>
-                        
+
                     </div>
 
 

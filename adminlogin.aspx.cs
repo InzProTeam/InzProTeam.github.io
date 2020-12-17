@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace InzProWeb
 {
@@ -19,6 +14,30 @@ namespace InzProWeb
         }
 
         protected void ButtonSingInAdmin_Click(object sender, EventArgs e)
+        {
+
+            if (Page.IsValid)
+            {
+                AdminLogin();
+                Response.Redirect("HomePage.aspx");
+            }
+            
+        }
+
+        protected void CustomValidatorLoginSucces_ServerValidate(object source, System.Web.UI.WebControls.ServerValidateEventArgs args)
+        {
+            if (LoginSucces())
+            {
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
+            }
+        }
+        //User Define method
+
+        void AdminLogin()
         {
             try
             {
@@ -39,17 +58,47 @@ namespace InzProWeb
                         Session["username"] = sqlDataReader.GetValue(0).ToString();
                         Session["role"] = "admin";
                     }
-                    Response.Redirect("WebForm1.aspx");
 
-                }
-                else
-                { 
-                    Response.Write("<script>alert('Nie poprawna nazwa użytkownika lub hasło.');</script>");
                 }
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + ".');</script>");
+            }
+        }
+
+
+
+        bool LoginSucces()
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_strcon);
+                if (sqlConnection.State == ConnectionState.Closed)
+                {
+                    sqlConnection.Open();
+                }
+
+                string querry;
+                querry = "SELECT username FROM Admin WHERE Username ='" + TextBoxAdminNameIn.Text.Trim() + "' AND Password = '" +TextBoxPasswordAdminIn.Text.Trim() + "'";
+                SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + ".');</script>");
+                return false;
             }
         }
     }

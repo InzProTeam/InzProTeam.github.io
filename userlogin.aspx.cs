@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace InzProWeb
 {
@@ -21,6 +16,33 @@ namespace InzProWeb
 
         protected void ButtonSingIn_Click(object sender, EventArgs e)
         {
+
+            if (Page.IsValid)
+            {
+                UserLogin();
+                Response.Redirect("HomePage.aspx");
+            }
+        }
+
+        protected void ButtonSingUpIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
+        protected void CustomValidatorUserLogin_ServerValidate(object source, System.Web.UI.WebControls.ServerValidateEventArgs args)
+        {
+            if (LoginSucces())
+            {
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
+            }
+        }
+        //user define method
+
+        void UserLogin()
+        {
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(_strcon);
@@ -30,6 +52,7 @@ namespace InzProWeb
                 }
 
                 string querry = "SELECT * FROM Users WHERE Username='" + TextBoxUsernameIn.Text.Trim() + "' AND Password = '" + TextBoxPasswordIn.Text.Trim() + "'";
+                Console.WriteLine(TextBoxUsernameIn.Text.Trim());
                 SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
                 if (sqlDataReader.HasRows)
@@ -41,11 +64,7 @@ namespace InzProWeb
                         Session["role"] = "user";
                         Session["status"] = sqlDataReader.GetValue(4).ToString();
                     }
-                    Response.Redirect("WebForm1.aspx");
-                }
-                else
-                {
-                    Response.Write("<script>alert('Nie poprawna nazwa użytkownika lub hasło.');</script>");
+                   
                 }
             }
             catch (Exception ex)
@@ -53,10 +72,39 @@ namespace InzProWeb
                 Response.Write("<script>alert('" + ex.Message + ".');</script>");
             }
         }
-
-        protected void ButtonSingUpIn_Click(object sender, EventArgs e)
+        bool LoginSucces()
         {
-            Response.Redirect("SignUp.aspx");
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_strcon);
+                if (sqlConnection.State == ConnectionState.Closed)
+                {
+                    sqlConnection.Open();
+                }
+
+                string querry;
+                querry = "SELECT username FROM Users WHERE Username ='" + TextBoxUsernameIn.Text.Trim() + "' AND Password = '" + TextBoxPasswordIn.Text.Trim() + "'";
+                SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + ".');</script>");
+                return false;
+            }
         }
+
+  
     }
 }
