@@ -96,6 +96,15 @@ namespace InzProWeb
         protected global::System.Web.UI.WebControls.Button ButtonDeletePerm;
 
         /// <summary>
+        /// SqlDataSourceMember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceMember;
+
+        /// <summary>
         /// GridViewMemberList control.
         /// </summary>
         /// <remarks>

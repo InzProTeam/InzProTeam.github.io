@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userlogin.aspx.cs" Inherits="InzProWeb.userlogin" %>
+﻿<%@ Page Title="Logowanie" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userlogin.aspx.cs" Inherits="InzProWeb.userlogin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -37,6 +37,9 @@
                                 <label>Nazwa użytkownika</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBoxUsernameIn" runat="server" placeholder="Nazwa użytkownika"></asp:TextBox>
+                                    <small>
+                                        <asp:CustomValidator ID="CustomValidatorUserLogin" runat="server" Display="Dynamic" ForeColor="red" ErrorMessage="Niepoprawna nazwa lub hasło użytkownika" OnServerValidate="CustomValidatorUserLogin_ServerValidate"></asp:CustomValidator>
+                                    </small>
                                 </div>
 
                                 <label>Hasło</label>
@@ -59,7 +62,7 @@
                     </div>
                 </div>
 
-                <a href="#"><< Wróć do strony głównej</a><br />
+                <a href="HomePage.aspx"><< Wróć do strony głównej</a><br />
 
             </div>
 

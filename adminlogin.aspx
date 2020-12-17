@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminlogin.aspx.cs" Inherits="InzProWeb.adminlogin" %>
+﻿<%@ Page Title="Logowanie Admin" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminlogin.aspx.cs" Inherits="InzProWeb.adminlogin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -37,6 +37,9 @@
                                 <label>Nazwa admina</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBoxAdminNameIn" runat="server" placeholder="Nazwa admina"></asp:TextBox>
+                                    <small>
+                                        <asp:CustomValidator ID="CustomValidatorLoginSucces" runat="server" Display="Dynamic" ForeColor="red" ErrorMessage="Niepoprawna nazwa lub hasło admina" OnServerValidate="CustomValidatorLoginSucces_ServerValidate"></asp:CustomValidator>
+                                    </small>
                                 </div>
 
                                 <label>Hasło</label>
@@ -54,7 +57,7 @@
                     </div>
                 </div>
 
-                <a href="#"><< Wróć do strony głównej</a><br />
+                <a href="HomePage.aspx"><< Wróć do strony głównej</a><br />
 
             </div>
 

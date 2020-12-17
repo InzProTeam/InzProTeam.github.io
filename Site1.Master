@@ -1,27 +1,41 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="InzProWeb.Site1" %>
 
+
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
     <title></title>
+    
+    <%--jquery js--%>
+    <script src="bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+    <%--bootsrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+    
     <%--bootstrap css--%>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <%--datatables css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
     <%--fontawesome css--%>
     <link href="fontawesome/css/all.css" rel="stylesheet" />
-
-    <%--bootsrap js--%>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <%--jquery js--%>
-    <script src="bootstrap/js/jquery-3.5.1.slim.min.js"></script>
-    <%--popper js--%>
-    <script src="bootstrap/js/popper.min.js"></script>
-    <%--Our csks--%>
+    
+    <%--Our css--%>
     <link href="css/style.css" rel="stylesheet" />
+    
+    <%-- valdation js--%>
+    <script src="js/Validation.js"></script>
+
+
     <%--Font Lato--%>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+    <%--favicon --%>
+    <link runat="server" rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
+    <link runat="server" rel="icon" href="imgs/favicon.ico" type="image/ico" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -31,8 +45,8 @@
 
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand p-0" href="#">
-                    <img src="imgs/logo2.png" widtd:auto height="70" />
+                <a class="navbar-brand p-0" href="HomePage.aspx">
+                    <img src="imgs/logo2.png" width="auto" height="70" />
                      Kogucik.pl
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +56,7 @@
                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="homepage.aspx">Strona główna</a><%--Pamietaj zeby zmienic homepaage.aspx na prawdziwą--%>
+                            <a class="nav-link" href="HomePage.aspx">Strona główna</a><%--Pamietaj zeby zmienic homepaage.aspx na prawdziwą--%>
                         </li>
                         <li class="nav-item active ">
                             <a class="nav-link" href="AboutUs.aspx">O nas</a>

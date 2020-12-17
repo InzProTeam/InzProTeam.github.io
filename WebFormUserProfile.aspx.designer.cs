@@ -78,6 +78,24 @@ namespace InzProWeb
         protected global::System.Web.UI.WebControls.TextBox TextBoxUpdateDBO;
 
         /// <summary>
+        /// RangeValidatorDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorDate;
+
+        /// <summary>
+        /// RequiredFieldValidatorBirthday control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorBirthday;
+
+        /// <summary>
         /// ButtonUpdateDOB control.
         /// </summary>
         /// <remarks>
@@ -105,6 +123,33 @@ namespace InzProWeb
         protected global::System.Web.UI.WebControls.TextBox TextBoxUpdateEmail;
 
         /// <summary>
+        /// CustomValidatorEmailExists control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorEmailExists;
+
+        /// <summary>
+        /// RequiredFieldValidatorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEmail;
+
+        /// <summary>
+        /// CompareValidatorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidatorEmail;
+
+        /// <summary>
         /// ButtonUpdateEmail control.
         /// </summary>
         /// <remarks>
@@ -123,6 +168,24 @@ namespace InzProWeb
         protected global::System.Web.UI.WebControls.TextBox TextBoxCurrentPassword;
 
         /// <summary>
+        /// CompareValidatorOldNew control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidatorOldNew;
+
+        /// <summary>
+        /// CustomValidatorCorrectPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorCorrectPassword;
+
+        /// <summary>
         /// TextBoxNewPassword control.
         /// </summary>
         /// <remarks>
@@ -132,6 +195,42 @@ namespace InzProWeb
         protected global::System.Web.UI.WebControls.TextBox TextBoxNewPassword;
 
         /// <summary>
+        /// CustomValidatorProhibitedSigns2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorProhibitedSigns2;
+
+        /// <summary>
+        /// CustomValidatorPasswordLength control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorPasswordLength;
+
+        /// <summary>
+        /// CustomValidatorPasswordUpperCase control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorPasswordUpperCase;
+
+        /// <summary>
+        /// CustomValidatorPasswordSpecial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorPasswordSpecial;
+
+        /// <summary>
         /// TextBoxConfirmPassword control.
         /// </summary>
         /// <remarks>
@@ -139,6 +238,24 @@ namespace InzProWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxConfirmPassword;
+
+        /// <summary>
+        /// RequiredFieldValidatorConfirmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorConfirmPassword;
+
+        /// <summary>
+        /// CompareValidatorPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidatorPassword;
 
         /// <summary>
         /// ButtonUpdatePassword control.
