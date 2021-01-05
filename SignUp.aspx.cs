@@ -16,8 +16,9 @@ namespace InzProWeb
         }
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            RangeValidatorDate.MinimumValue = DateTime.Now.Date.AddYears(-110).ToString("yyyy-MM-dd");
-            RangeValidatorDate.MaximumValue = DateTime.Now.Date.AddYears(-13).ToString("yyyy-MM-dd");
+            var time = GetDataTime();
+            RangeValidatorDate.MinimumValue = time.Date.AddYears(-110).ToString("yyyy-MM-dd");
+            RangeValidatorDate.MaximumValue = time.Date.AddYears(-13).ToString("yyyy-MM-dd");
         }
 
         //sign up button click event
@@ -46,7 +47,7 @@ namespace InzProWeb
             var password = args.Value.ToCharArray();
             var count = password.Length;
 
-            if (count < 8 || count >30)
+            if (count < 8 || count > 30)
             {
                 args.IsValid = false;
 
@@ -82,7 +83,7 @@ namespace InzProWeb
                 if (password[i] == 33
                     || password[i] >= 35 && password[i] <= 38
                     || password[i] >= 40 && password[i] <= 42
-                    || password[i] == 64 
+                    || password[i] == 64
                     || password[i] == 94)
                 {
                     args.IsValid = true;
@@ -101,7 +102,7 @@ namespace InzProWeb
             }
             else
             {
-                args.IsValid=true;
+                args.IsValid = true;
             }
         }
 
@@ -122,11 +123,14 @@ namespace InzProWeb
             for (int index = 0; index < password.Length; index++)
             {
                 var number = password[index];
-                if (number == 33
-                    || number >= 35 && number <= 38
-                    || number >= 40 && number <= 42
-                    || number == 64
-                    || number == 94)
+                if (number == 34
+                    || number == 39
+                    || number >= 43 && number <= 47
+                    || number >= 58 && number <= 63
+                    || number >= 91 && number <= 93
+                    || number == 95
+                    || number == 96
+                    || number >= 123 && number <= 126)
                 {
                     args.IsValid = false;
                     return;
@@ -142,11 +146,14 @@ namespace InzProWeb
             for (int index = 0; index < password.Length; index++)
             {
                 var number = password[index];
-                if (number == 33
-                    || number >= 35 && number <= 38
-                    || number >= 40 && number <= 42
-                    || number == 64
-                    || number == 94)
+                if (number == 34
+                    || number == 39
+                    || number >= 43 && number <= 47
+                    || number >= 58 && number <= 63
+                    || number >= 91 && number <= 93
+                    || number == 95
+                    || number == 96
+                    || number >= 123 && number <= 126)
                 {
                     args.IsValid = false;
                     return;
@@ -154,7 +161,7 @@ namespace InzProWeb
 
             }
             args.IsValid = true;
-            
+
         }
 
         // user definded method
@@ -176,10 +183,12 @@ namespace InzProWeb
                 sqlDataAdapter.Fill(dataTable);
                 if (dataTable.Rows.Count > 0)
                 {
+                    sqlConnection.Close();
                     return true;
                 }
                 else
                 {
+                    sqlConnection.Close();
                     return false;
                 }
 
@@ -211,7 +220,7 @@ namespace InzProWeb
                 sqlCommand.Parameters.AddWithValue("@status", "pending");
 
                 sqlCommand.ExecuteNonQuery();
-                sqlCommand.Clone();
+                sqlConnection.Close();
             }
             catch (Exception ex)
             {
@@ -237,10 +246,12 @@ namespace InzProWeb
                 sqlDataAdapter.Fill(dataTable);
                 if (dataTable.Rows.Count > 0)
                 {
+                    sqlConnection.Close();
                     return true;
                 }
                 else
                 {
+                    sqlConnection.Close();
                     return false;
                 }
 
@@ -253,6 +264,35 @@ namespace InzProWeb
 
         }
 
+        DateTime GetDataTime()
+        {
+
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_strcon);
+                if (sqlConnection.State == ConnectionState.Closed)
+                {
+                    sqlConnection.Open();
+                }
+
+                SqlCommand sqlCommandDate = new SqlCommand("SELECT getdate() AS [now]", sqlConnection);
+                SqlDataReader sqlDataReader = sqlCommandDate.ExecuteReader();
+                DateTime time = DateTime.Now;
+                if (sqlDataReader.HasRows)
+                {
+                    while (sqlDataReader.Read())
+                        time = sqlDataReader.GetDateTime(0);
+                }
+                sqlDataReader.Close();
+                sqlConnection.Close();
+                return time;
+            }
+            catch (Exception ex)
+            {
+                return DateTime.Now;
+                Response.Write("<script>alert('" + ex.Message + ".');</script>");
+            }
+        }
 
     }
 }

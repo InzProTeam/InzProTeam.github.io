@@ -73,6 +73,8 @@ namespace InzProWeb
                     {
                         ClearForm();
                     }
+                    sqlDataReader.Close();
+                    sqlConnection.Close();
              
                 }
                 catch (Exception ex)
@@ -160,10 +162,12 @@ namespace InzProWeb
                 sqlDataAdapter.Fill(dataTable);
                 if (dataTable.Rows.Count > 0)
                 {
+                    sqlConnection.Close();
                     return true;
                 }
                 else
                 {
+                    sqlConnection.Close();
                     return false;
                 }
             }
