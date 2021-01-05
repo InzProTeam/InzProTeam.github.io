@@ -30,6 +30,7 @@
     <script src="js/Validation.js"></script>
 
 
+
     <%--Font Lato--%>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 
@@ -46,7 +47,7 @@
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand p-0" href="HomePage.aspx">
-                    <img src="imgs/logo2.png" width="auto" height="70" />
+                    <img src="imgs/logo.png" width="auto" height="70" />
                      Kogucik.pl
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
