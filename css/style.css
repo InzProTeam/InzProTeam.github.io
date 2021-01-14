@@ -156,3 +156,11 @@ footer {
     font-size: 60px;
     margin: 2px 0px 2px 0px;
 }
+
+/*tetris*/
+canvas {
+    border: solid .2em #fff;
+    height: 90vh;
+    text-align: center;
+}
+
