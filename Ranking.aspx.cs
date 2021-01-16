@@ -11,7 +11,8 @@ namespace InzProWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GridViewRankingSnake.DataBind();
+            GridViewRankingTetris.DataBind();
         }
     }
 }

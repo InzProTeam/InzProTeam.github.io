@@ -19,8 +19,6 @@ namespace InzProWeb
         }
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            Session["role"] = "user";
-            Session["username"] = "Elo";
             if (string.IsNullOrEmpty((string)Session["role"]))
             {
                 TextBoxScore.Visible = false;
@@ -78,7 +76,19 @@ namespace InzProWeb
 
         protected void ButtonRestart_Click(object sender, EventArgs e)
         {
-            
+            TextBoxScore.Text = "";
+        }
+
+        protected void CustomValidatorActive_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (Session["role"].Equals("user") && Session["status"].Equals("active"))
+            {
+                args.IsValid = true;
+                return;
+            }
+
+            args.IsValid = false;
+            return;
         }
     }
 }

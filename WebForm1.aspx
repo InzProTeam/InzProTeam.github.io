@@ -3,8 +3,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>
-     <center> Dummy page</center>  
-    </h1>
+    <p style="text-align: center"><img src="imgs/snake.jpg" height="100" /></p>
+
 
 </asp:Content>
