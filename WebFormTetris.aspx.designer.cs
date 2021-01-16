@@ -24,15 +24,6 @@ namespace InzProWeb
         protected global::System.Web.UI.WebControls.Button Refresh;
 
         /// <summary>
-        /// ButtonSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSave;
-
-        /// <summary>
         /// TextBoxScore control.
         /// </summary>
         /// <remarks>
@@ -58,5 +49,14 @@ namespace InzProWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorActice;
+
+        /// <summary>
+        /// ButtonSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSave;
     }
 }

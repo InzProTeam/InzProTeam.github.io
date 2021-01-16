@@ -1,18 +1,20 @@
 ﻿body {
     font-family: "Lato", sans-serif;
-    /*background-color: #d5eee8;*/ /*
-    background-color: #F6FFFB;*/
+    background-image: url('../imgs/background.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 nav {
-    background-color: #000080;
-    /*background-color: #111525;*/
-    /*background-color: white;*/
+    /* background-color: #000080;*/
+    background-color: #071773;
     font-weight: 500;
 }
 
 footer {
-    background-color: #000080;
+    /*background-color: #000080;*/
+    background-color: #071773;
     /*position: absolute;
     bottom: 0;
     width: 100%;*/
@@ -21,13 +23,14 @@ footer {
 
 
 .game-headline {
-     text-transform: uppercase;
- }
-
-.game-headline a {
-    color: #292b2c;
-    transition: 0.5s;
+    text-transform: uppercase;
+    
 }
+
+    .game-headline a {
+        color: #292b2c;
+        text-decoration: none;
+    }
 
 .social-media {
     transition: 0.5s;
@@ -64,11 +67,6 @@ footer {
     transition: 0.5s;
 }
 
-
-
-/*HOME PAGE END*/
-
-/*ABOUT US START*/
 
 .Us {
     border-image: 3px solid #555;
