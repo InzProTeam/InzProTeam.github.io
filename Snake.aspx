@@ -3,22 +3,113 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 mx-auto m-3" align="center">
-                <div id="score">WYNIK</div>
-                <canvas id="snake" width="400" height="400"></canvas>
-                <asp:Button class="btn btn-secondary btn-block btn-lg" ID="ButtonRestart" runat="server" Text="Restart" OnClick="ButtonRestart_Click" />
-                <asp:TextBox ID="TextBoxScore" ClientIDMode="Static" runat="server"></asp:TextBox>
-                <div>
-                    <small>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorScore" runat="server" ControlToValidate="TextBoxScore" Display="Dynamic" ForeColor="red" ErrorMessage="Nie udało Ci się nabić jeszcze wyniku ;)" ValidationGroup="Score"></asp:RequiredFieldValidator>
-                    </small>
+        <div class="col-md-8 mx-auto m-3" >
+            <div class="card badge-light pt-2 pb-3">
+                
+               
+                <%--<div class="row">
+
+                        <div class="col-md-1">
+                            <img src="imgs/snake.svg" alt=""/>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>WĄŻ</h4>
+                        </div>
+                        
+
+               </div>--%>
+
+                <div class="row" align="center"">
+                    <%--<div class="col-md-6 mx-auto m-3" align="center">--%>
+                    <div class="col-md-12 mx-auto<%-- mt-3--%>">
+                        <div id="score">WYNIK</div>
+                    </div>
+                    <div class="col-md-12 mx-auto">
+                        <canvas id="snake" width="400" height="400"></canvas>
+                    </div>
                 </div>
-                <asp:Button Class="btn btn-info btn-block btn-lg" ID="ButtonSave" runat="server" Text="Zapisz wynik" OnClick="ButtonSave_Click" ValidationGroup="Score" />
+                <div class="row" align="center"">
+                    <div class="col-6 mx-auto m-3" align="center">
+                        <asp:Button class="btn btn-secondary btn-block btn-lg" ID="Button1" runat="server" Text="Restart" OnClick="ButtonRestart_Click" />
+                    </div>
+                </div>
+                
+                <div class="row" align="center"">
+                     <div class="col-6 mx-auto">
+                         <label><h5>Wynik:</h5></label>
+                         <asp:TextBox ID="TextBoxScore" ClientIDMode="Static" runat="server"></asp:TextBox>
+                         <div>
+                             <small>
+                                 <asp:RequiredFieldValidator ID="RequiredFieldValidatorScore" runat="server" ControlToValidate="TextBoxScore" Display="Dynamic" ForeColor="red" ErrorMessage="Nie udało Ci się nabić jeszcze wyniku ;)" ValidationGroup="Score"></asp:RequiredFieldValidator>
+                             </small>
+                         </div>
+                     </div>
+               </div>
+                <div class="row" align="center"">
+                    <div class="col-6 m-auto mt-sm-2 mt-lg-0">
+                         <asp:Button Class="btn btn-info btn-block btn-lg" ID="ButtonSave" runat="server" Text="Zapisz wynik" OnClick="ButtonSave_Click" ValidationGroup="Score" />
+                     </div>
+                </div>
+
+                <div class="row">
+                            <div class="col">
+                                <hr>
+                            </div>
+                        </div>
+
+                <div class="row">
+                    <div class="col-md-11 m-auto">
+                        <b>Zasady gry:</b> Sterujesz wężem, który zjada owoce. Każdy owoc wydłuża węża o jedną kratkę oraz dodaje punkty. 
+                        Celem gry jest stworzenie jak najdłuższego węża. Gra kończy się gdy wąż zderzy się z własnym ciałem.<br />
+                        <b>Sterowanie:</b> WSAD / strzałki.
+
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row mb-2">
+                <a href="#"><< Wróć do strony głównej</a><br />
+            </div>
+          </div>
+        </div>
+
+    <%--<div class="container">
+        <div class="card mt-2 mb-2">
+            <div class="row">
+                <div class="col-md-6 mx-auto m-3" align="center">
+                    <div id="score">WYNIK</div>
+                    <canvas id="snake" width="400" height="400"></canvas>
+                    <div class="row ml-4">
+                        <div class="col-11">
+                            <asp:Button class="btn btn-secondary btn-block btn-lg" ID="ButtonRestart" runat="server" Text="Restart" OnClick="ButtonRestart_Click" />
+                        </div>
+                    </div>
+                    <div class="row ml-4 pt-2">
+                        <div class="col-3">
+                            <asp:TextBox ID="TextBoxScore" ClientIDMode="Static" runat="server"></asp:TextBox>
+                            <div>
+                                <small>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorScore" runat="server" ControlToValidate="TextBoxScore" Display="Dynamic" ForeColor="red" ErrorMessage="Nie udało Ci się nabić jeszcze wyniku ;)" ValidationGroup="Score"></asp:RequiredFieldValidator>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                               
+                        </div>
+                        <div class="col-7">
+                            <asp:Button Class="btn btn-info btn-block btn-lg" ID="ButtonSave" runat="server" Text="Zapisz wynik" OnClick="ButtonSave_Click" ValidationGroup="Score" />
+                        </div>
+                        
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
+
+    </div>--%>
     <script>
 
         function setReadOnly() {
@@ -99,7 +190,8 @@
                 if (trail[i].x === snakeX && trail[i].y === snakeY && tail > 3) {
 
                     var s = score;
-                    document.getElementById("score").innerHTML = "Koniec gry WYNIK: " + s;
+                    //document.getElementById("score").innerHTML = "<pre>" + "KONIEC GRY !!!" + "\n" + "WYNIK: " + s + "</pre>";
+                    document.getElementById("score").innerHTML = "KONIEC GRY !!!" + "<br />" + "WYNIK: " + s;
                     tail = 3;
                     score = 0;
                     /* later */
