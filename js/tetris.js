@@ -171,8 +171,12 @@ function playerReset() {
         arena.forEach(row => row.fill(0));
         updateScore();
         MyTextBox = document.getElementById("TextBoxScore");
-        if (MyTextBox)
-            MyTextBox.value = player.score;
+        if (MyTextBox) {
+            if(player.score == 0)
+                MyTextBox.value = "";
+            else
+                MyTextBox.value = player.score;
+        }
         move = false;
         dropInterval = undefined;
 

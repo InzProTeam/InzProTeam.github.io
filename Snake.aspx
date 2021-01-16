@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-        <div class="col-md-8 mx-auto m-3">
+        <div class="col-12 col-md-11 mx-auto m-3">
             <div class="card badge-light pt-2 pb-3">
 
                 <div class="row" align="center">
@@ -18,15 +18,12 @@
                 </div>
                 <div class="row" align="center">
                     <div class="col-6 mx-auto m-3" align="center">
-                        <asp:Button class="btn btn-secondary btn-block btn-lg" ID="Button1" runat="server" Text="Restart" OnClick="ButtonRestart_Click" />
+                        <asp:Button class="btn btn-info btn-block btn-lg" ID="Button1" runat="server" Text="Zagraj ponownie" OnClick="ButtonRestart_Click" />
                     </div>
                 </div>
 
                 <div class="row" align="center">
                     <div class="col-6 mx-auto">
-                        <label>
-                            <h5>Wynik:</h5>
-                        </label>
                         <asp:TextBox ID="TextBoxScore" ClientIDMode="Static" runat="server"></asp:TextBox>
                         <div>
                             <small>
@@ -36,8 +33,8 @@
                     </div>
                 </div>
                 <div class="row" align="center">
-                    <div class="col-6 m-auto mt-sm-2 mt-lg-0">
-                        <asp:Button Class="btn btn-info btn-block btn-lg" ID="ButtonSave" runat="server" Text="Zapisz wynik" OnClick="ButtonSave_Click" ValidationGroup="Score" />
+                    <div class="col-6 m-auto pt-sm-3">
+                        <asp:Button Class="btn btn-secondary btn-block btn-lg" ID="ButtonSave" runat="server" Text="Zapisz wynik" OnClick="ButtonSave_Click" ValidationGroup="Score" />
                     </div>
                 </div>
 
@@ -51,16 +48,16 @@
                     <div class="col-md-11 m-auto">
                         <b>Zasady gry:</b> Sterujesz wężem, który zjada owoce. Każdy owoc wydłuża węża o jedną kratkę oraz dodaje punkty. 
                         Celem gry jest stworzenie jak najdłuższego węża. Gra kończy się gdy wąż zderzy się z własnym ciałem.<br />
-                        <b>Sterowanie:</b> WSAD / strzałki.
+                        <b>Sterowanie:</b> WSAD.
 
                     </div>
                 </div>
 
             </div>
 
-            <div class="row mb-2">
+            <%--<div class="row mb-2">
                 <a href="#"><< Wróć do strony głównej</a><br />
-            </div>
+            </div>--%>
         </div>
     </div>
 
@@ -72,8 +69,7 @@
             var textbox = document.getElementById("TextBoxScore");
             if (textbox)
                 textbox.readOnly = "readonly";
-            setReadOnly();
-        }
+        } setReadOnly();
 
 
     </script>

@@ -21,14 +21,14 @@
 
                <div class="row">
                     <div class="col-md-4 game-item">
-                        <a href="#"><div class="game-img-background" style="background-image: url('imgs/tic-tac-toe.jpg');></div></a>
+                        <a href="Tic-Tac-Toe.aspx"><div class="game-img-background" style="background-image: url('imgs/tic-tac-toe.jpg');></div></a>
                         <div class="img-text-game">
                             <div class="logo-game p-5" style="text-align:center;">
                                     <img src="imgs/tic-tac-toeB.svg" alt=""/>  
                             </div>
                         </div>
                         <div class="game-headline pt-md-1">
-                            <a href="#">Kółko i krzyżyk</a>
+                            <a href="Tic-Tac-Toe.aspx">Kółko i krzyżyk</a>
                         </div>
                     </div>
 
@@ -45,14 +45,14 @@
                     </div>
 
                    <div class="col-md-4 game-item">
-                        <a href="#"><div class="game-img-background" style="background-image: url('imgs/tetris.jpg');></div></a>
+                        <a href="WebFormTetris.aspx"><div class="game-img-background" style="background-image: url('imgs/tetris.jpg');></div></a>
                         <div class="img-text-game">
                             <div class="logo-game p-5" style="text-align:center;">
                                     <img src="imgs/tetrisB.svg" alt=""/>  
                             </div>
                         </div>
                        <div class="game-headline pt-md-1">
-                            <a href="#">Tetris</a>
+                            <a href="WebFormTetris.aspx">Tetris</a>
                         </div>
                     </div>
                 </div>

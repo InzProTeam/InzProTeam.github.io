@@ -19,8 +19,7 @@ namespace InzProWeb
         }
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            Session["role"] = "user";
-            Session["username"] = "siema";
+            
             if (string.IsNullOrEmpty((string)Session["role"]))
             {
                 TextBoxScore.Visible = false;
