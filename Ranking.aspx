@@ -30,7 +30,17 @@
                                         <h5>WĄŻ</h5>
                                     </a>
                                 </div>
-                                <asp:GridView class="table thead-dark table-striped table-bordered" ID="RankingSnake" runat="server"></asp:GridView>
+                                <asp:GridView class="table thead-dark table-striped table-bordered" ID="GridViewRankingSnake" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceSnake">
+                                    <Columns>
+                                        <asp:BoundField DataField="Username" HeaderText="Nazwa użytkownika" SortExpression="Username" />
+                                        <asp:BoundField DataField="Score" HeaderText="Wynik" SortExpression="Score" />
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSourceSnake" runat="server" ConnectionString="<%$ ConnectionStrings:InzProConnectionString %>" SelectCommand="SELECT TOP 10 [Username], [Score] FROM [GameStatistic] WHERE ([GameName] = @GameName) ORDER BY [Score] DESC, [ScoreDate], [Username]">
+                                    <SelectParameters>
+                                        <asp:Parameter DefaultValue="snake" Name="GameName" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                             </div>
                             <div class="col-lg-6 pt-md-2 pt-lg-0">
                                 <div class="game-headline" style="text-align: center;">
@@ -38,7 +48,17 @@
                                         <h5>TETRIS</h5>
                                     </a>
                                 </div>
-                                <asp:GridView class="table thead-dark table-striped table-bordered" ID="RankingTetris" runat="server"></asp:GridView>
+                                <asp:GridView class="table thead-dark table-striped table-bordered" ID="GridViewRankingTetris" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceTetris">
+                                    <Columns>
+                                        <asp:BoundField DataField="Username" HeaderText="Nazwa użytkownika" SortExpression="Username" />
+                                        <asp:BoundField DataField="Score" HeaderText="Wynik" SortExpression="Score" />
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSourceTetris" runat="server" ConnectionString="<%$ ConnectionStrings:InzProConnectionString %>" SelectCommand="SELECT TOP 10 [Username], [Score] FROM [GameStatistic] WHERE ([GameName] = @GameName) ORDER BY [Score] DESC, [ScoreDate], [Username]">
+                                    <SelectParameters>
+                                        <asp:Parameter DefaultValue="tetris" Name="GameName" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                             </div>
                         </div>
 
@@ -95,4 +115,6 @@
             </div>
 
         </div>
+    
+    </div>
 </asp:Content>

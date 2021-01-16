@@ -226,8 +226,7 @@ namespace InzProWeb
             {
                 Response.Write("<script>alert('" + ex.Message + ".');</script>");
             }
-        }
-
+        } 
         bool CheckEmailExists()
         {
             try
