@@ -15,22 +15,40 @@ namespace InzProWeb
     {
 
         /// <summary>
-        /// RankingSnake control.
+        /// GridViewRankingSnake control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView RankingSnake;
+        protected global::System.Web.UI.WebControls.GridView GridViewRankingSnake;
 
         /// <summary>
-        /// RankingTetris control.
+        /// SqlDataSourceSnake control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView RankingTetris;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceSnake;
+
+        /// <summary>
+        /// GridViewRankingTetris control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewRankingTetris;
+
+        /// <summary>
+        /// SqlDataSourceTetris control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceTetris;
 
         /// <summary>
         /// ButtonSingIn control.
