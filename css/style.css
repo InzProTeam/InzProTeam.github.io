@@ -158,7 +158,7 @@ footer {
 /*tetris*/
 canvas {
     border: solid .2em #fff;
-    height: 90vh;
+   /* height: 90vh;*/
     text-align: center;
 }
 

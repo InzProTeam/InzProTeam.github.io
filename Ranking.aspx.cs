@@ -14,5 +14,15 @@ namespace InzProWeb
             GridViewRankingSnake.DataBind();
             GridViewRankingTetris.DataBind();
         }
+
+        protected void ButtonSingIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userlogin.aspx");
+        }
+
+        protected void ButtonSingUpIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
     }
 }

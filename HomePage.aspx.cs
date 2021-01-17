@@ -11,7 +11,17 @@ namespace InzProWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void ButtonSingUpIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
+
+        protected void ButtonLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userlogin.aspx");
         }
     }
 }

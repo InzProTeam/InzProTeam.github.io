@@ -68,10 +68,10 @@
                     <div class="col-md-5">
                         <h5>Podoba Ci się nasza strona? Zostań z nami na dłużej!</h5>
                         <div class="form-group">
-                            <asp:Button class="btn btn-info btn-block btn-lg" ID="Button1" runat="server" Text="Zaloguj się"></asp:Button>
+                            <asp:Button class="btn btn-info btn-block btn-lg" ID="ButtonLogin" runat="server" Text="Zaloguj się" OnClick="ButtonLogin_Click"/>
                         </div>
                         <div class="form-group">
-                            <input class="btn btn-secondary btn-block btn-lg" id="ButtonSingUpIn" type="button" value="Zarejestruj się" />
+                            <asp:Button class="btn btn-secondary btn-block btn-lg" ID="ButtonSingUpIn" runat="server" Text="Zarejestruj się" OnClick="ButtonSingUpIn_Click"  />
                         </div>
                     </div>
                     <div class="col-md-1">
@@ -80,13 +80,14 @@
                     <div class="col-md-5 col-lg-5 fa-6x">
                         <div class="row">
                             <div class="col-3" style="text-align:center;">
-                                 <button class="btn social-media" id="yt"><i class="fab fa-youtube-square " style="color:#FF0000;"></i></button>
+                                 <button class="btn social-media" id="yt"><a href="https://www.youtube.com/" class="fab fa-youtube-square " style="color:#FF0000; text-decoration: none;"></a></button>
                             </div>
                             <div class="col-3" style="text-align:center;">
-                                 <button class="btn social-media" id="fb"><i class="fab fa-facebook-square" style="color:#4267B2 "></i></button>
+                                 <button class="btn social-media" id="fb"><a href="https://www.facebook.com/" class="fab fa-facebook-square" style="color: #4267B2; text-decoration: none; "></a></button>
                             </div>
                             <div class="col-3" style="text-align:center;">
-                                  <button class="btn social-media" id="insta"><i class="fab fa-instagram-square" style="background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
+                                  <button class="btn social-media" id="insta">
+                                      <a href="https://www.instagram.com/" class="fab fa-instagram-square" style="background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
                                                                                                                                   radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
                                                                                                                                   radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
                                                                                                                                   radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
@@ -97,11 +98,11 @@
                                                                                                                                   color:transparent; 
                                                                                                                                   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
                                                                                                                                   -webkit-background-clip: text;
-                                                                                                                                  background-clip: text;">
-                                                                                                                                  </i></button>
+                                                                                                                                  background-clip: text; text-decoration: none;">
+                                                                                                                                  </a></button>
                             </div>
                             <div class="col-3" style="text-align:center;">
-                                <button class="btn social-media" id="tw"> <i class="fab fa-twitter-square" style="color:#1DA1F2"></i></button>
+                                <button class="btn social-media" id="tw"> <a href="https://twitter.com/?lang=pl" class="fab fa-twitter-square" style="color: #1DA1F2; text-decoration: none;"></a></button>
                             </div>
                         </div>
 

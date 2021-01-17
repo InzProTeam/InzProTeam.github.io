@@ -2,18 +2,18 @@
 
 
 function SnakeGame() {
-    canv = document.getElementById("snake");
-    contx = canv.getContext("2d");
     document.addEventListener("keydown", KeyPush);
     refreshIntervalId = setInterval(Game, 1000 / 12);
 }
-SnakeGame();
 
 
 
+canv = document.getElementById("snake");
+contx = canv.getContext("2d");
+snakeX = snakeY = canv.width/(canv.width/10);
 
-snakeX = snakeY = 10;
-gridSize = tileCount = 20; //20 * 20 = 400
+tileCount = canv.width / (canv.width / 20); //20 * 20 = 400
+gridSize = canv.width / tileCount;
 snakeSpeedX = snakeSpeedY = 0;
 do {
     appleX = Math.floor(Math.random() * tileCount);
@@ -53,9 +53,9 @@ function Game() {
             contx.fillStyle = "yellow";
         }
         if (oldAppleX === trail[i].x && oldAppleY === trail[i].y) {
-            contx.fillRect(trail[i].x * gridSize, trail[i].y * gridSize, gridSize + 5, gridSize + 5);
+            contx.fillRect(trail[i].x * gridSize - (0.1 * gridSize), trail[i].y * gridSize - (0.1 * gridSize), gridSize + (0.1 * gridSize), gridSize + (0.1 * gridSize));
         } else {
-            contx.fillRect(trail[i].x * gridSize, trail[i].y * gridSize, gridSize - 2, gridSize - 2);
+            contx.fillRect(trail[i].x * gridSize, trail[i].y * gridSize, gridSize - (0.1 * gridSize), gridSize - (0.1 * gridSize));
         }
         //death
         if (trail[i].x === snakeX && trail[i].y === snakeY && tail > 3) {
@@ -110,7 +110,7 @@ function Game() {
 
     }
     contx.fillStyle = "red";
-    contx.fillRect(appleX * gridSize, appleY * gridSize, gridSize - 2, gridSize - 2);
+    contx.fillRect(appleX * gridSize, appleY * gridSize, gridSize - (0.1 * gridSize), gridSize - (0.1 * gridSize));
     sing = 0;
 }
 
@@ -118,7 +118,7 @@ function Game() {
 function KeyPush(event) {
     if (sing === 0) {
         switch (event.keyCode) {
-            case 37:
+
             case 65: //left
 
                 if (snakeSpeedX !== 1) {
@@ -127,7 +127,7 @@ function KeyPush(event) {
                     sing++;
                 }
                 break;
-            case 38:
+            
             case 87: //up
                 if (snakeSpeedY !== 1) {
                     snakeSpeedX = 0;
@@ -135,7 +135,7 @@ function KeyPush(event) {
                     sing++;
                 }
                 break;
-            case 39:
+            
             case 68: //right
                 if (snakeSpeedX !== -1) {
                     snakeSpeedX = 1;
@@ -143,7 +143,7 @@ function KeyPush(event) {
                     sing++;
                 }
                 break;
-            case 40:
+            
             case 83: //down
                 if (snakeSpeedY !== -1) {
                     snakeSpeedX = 0;
