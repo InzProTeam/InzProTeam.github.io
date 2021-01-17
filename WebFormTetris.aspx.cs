@@ -30,6 +30,11 @@ namespace InzProWeb
                 TextBoxScore.Visible = true;
                 ButtonSave.Visible = true;
             }
+            else
+            {
+                TextBoxScore.Visible = false;
+                ButtonSave.Visible = false;
+            }
         }
 
         protected void Refresh_Click(object sender, EventArgs e)
@@ -39,7 +44,11 @@ namespace InzProWeb
 
         protected void ButtonSave_Click(object sender, EventArgs e)
         {
-            SaveScore();
+            if (Page.IsValid)
+            {
+                SaveScore();
+            }
+
             TextBoxScore.Text = "";
         }
 

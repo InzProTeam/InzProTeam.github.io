@@ -41,7 +41,7 @@
 						</h2>
 					</div>
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-						<div class="card-body">Wszelkie błędy prosimy zgłaszać na nasz adres mailowy: <a class="p-1" href="" style="text-decoration:none">kogucik@gmail.com</a> </div>
+						<div class="card-body">Wszelkie błędy prosimy zgłaszać na nasz adres mailowy: <a class="p-1" href="" style="text-decoration:none">kogucik@example.com</a> </div>
 					</div>
 				</div>
 				<div class="card">
@@ -51,7 +51,7 @@
 						</h2>
 					</div>
 					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-						<div class="card-body">Platoforma podlega ciągłemu rozwojowi. Słuchamy sugestii naszych graczy i staramy się sprostać waszym oczekiwaniom :D. Wszelkie pomysły, prośby i sugestie prosimy wysyłać na nasz adres mailowy: <a class="p-1" href="" style="text-decoration:none">kogucik@gmail.com</a></div>
+						<div class="card-body">Platoforma podlega ciągłemu rozwojowi. Słuchamy sugestii naszych graczy i staramy się sprostać waszym oczekiwaniom :D. Wszelkie pomysły, prośby i sugestie prosimy wysyłać na nasz adres mailowy: <a class="p-1" href="" style="text-decoration:none">kogucik@example.com</a></div>
 					</div>
 				</div>
 				

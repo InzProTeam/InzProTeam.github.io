@@ -15,7 +15,7 @@
                 </div>
                 <div class="row">
                     <div class="col"  align="center">
-                        <canvas id="tetris" width="240" height="400" />
+                        <canvas id="tetris" width="300" height="500" />
                         <script src="js/tetris.js"></script>
                     </div>
                 </div>

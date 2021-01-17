@@ -13,7 +13,7 @@
                         <div id="score">WYNIK</div>
                     </div>
                     <div class="col-md-12 mx-auto">
-                        <canvas id="snake" width="400" height="400"></canvas>
+                        <canvas id="snake" height="400" width="400"></canvas>
                     </div>
                 </div>
                 <div class="row" align="center">
@@ -28,6 +28,11 @@
                         <div>
                             <small>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidatorScore" runat="server" ControlToValidate="TextBoxScore" Display="Dynamic" ForeColor="red" ErrorMessage="Nie udało Ci się nabić jeszcze wyniku ;)" ValidationGroup="Score"></asp:RequiredFieldValidator>
+                            </small>
+                        </div>
+                        <div>
+                            <small>
+                                <asp:CustomValidator ID="CustomValidatorActive" runat="server" Display="Dynamic" ForeColor="red" ErrorMessage="Twoje konto nie zostało jeszcze aktywowane lub zostało dezaktywowane z powodu naruszenia zasad strony" OnServerValidate="CustomValidatorActive_ServerValidate" ValidationGroup="Score"></asp:CustomValidator>
                             </small>
                         </div>
                     </div>
@@ -69,7 +74,9 @@
             var textbox = document.getElementById("TextBoxScore");
             if (textbox)
                 textbox.readOnly = "readonly";
-        } setReadOnly();
+        }
+        setReadOnly();
+        SnakeGame();
 
 
     </script>
