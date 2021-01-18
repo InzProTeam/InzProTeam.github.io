@@ -27,7 +27,7 @@
                                     <img src="imgs/tic-tac-toeB.svg" alt=""/>  
                             </div>
                         </div>
-                        <div class="game-headline pt-md-1">
+                        <div class="game-headline pb-sm-3 pb-md-0 pt-md-1">
                             <a href="Tic-Tac-Toe.aspx">Kółko i krzyżyk</a>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                                     <img src="imgs/snakeB.svg" alt=""/>
                             </div>
                         </div>
-                       <div class="game-headline pt-md-1">
+                       <div class="game-headline pb-sm-3 pb-md-0  pt-md-1">
                             <a href="Snake.aspx">Wąż</a>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                                     <img src="imgs/tetrisB.svg" alt=""/>  
                             </div>
                         </div>
-                       <div class="game-headline pt-md-1">
+                       <div class="game-headline  pt-md-1">
                             <a href="WebFormTetris.aspx">Tetris</a>
                         </div>
                     </div>
