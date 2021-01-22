@@ -27,7 +27,7 @@
 				<div class="card">
 					<div class="card-header" id="headingTwo">
 						<h2 class="mb-0">
-							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Zarejestrowałem/łam się na platofrmie, lecz w dalszym ciągu nie mogę się zalogować. Czy to błąd? <i class="material-icons">add</i></a>                               
+							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Zarejestrowałem/łam się na platofrmie, lecz w dalszym ciągu nie mogę zapisać swojego wyniku w rankingu. Czy to błąd? <i class="material-icons">add</i></a>                               
 						</h2>
 					</div>
 					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
