@@ -1,8 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="WebFormTetris.aspx.cs" Inherits="InzProWeb.WebFormTetris" %>
+﻿<%@ Page Title="Tetris" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="WebFormTetris.aspx.cs" Inherits="InzProWeb.WebFormTetris" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+<head>
+<style>
+    .canvas
+    {
+        height: 120vh;
+    }
+</style>
+</head>   
     <div class="container">
         <div class="col-12 col-md-11 mx-auto m-3">
             <div class="card badge-light pt-2 pb-3">
@@ -61,7 +68,7 @@
                         Jeśli wiersz jest w całości zapełniony, to zostanie usunięty, a kwadraty leżące nad nim przesuną się w dół. 
                         Gra kończy się, gdy nowa figura nie może zostać wprowadzona na planszę, ponieważ brak dla niej miejsca. 
                         Za każdy usunięty wiersz gracz otrzymuje punkty.<br />
-                        <b>Sterowanie:</b> Poruszanie się: A/D. Obracanie: J/L.
+                        <b>Sterowanie:</b> Poruszanie się: A/D. Obracanie: J/L. Przyśpiesznie opadania: S
 
                     </div>
                 </div>

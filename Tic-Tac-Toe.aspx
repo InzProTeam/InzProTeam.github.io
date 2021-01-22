@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Tic-Tac-Toe.aspx.cs" Inherits="InzProWeb.Tic_Tac_Toe" %>
+﻿<%@ Page Title="Kółko i Krzyżyk" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Tic-Tac-Toe.aspx.cs" Inherits="InzProWeb.Tic_Tac_Toe" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
