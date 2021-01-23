@@ -1,101 +1,126 @@
 ﻿/// <reference path="../js/tetris.js" />
 /// <reference path="../scripts/jasmine/jasmine.js" />
 
-describe("Figura I", function () {
-    var piece = createPiece('I');
-    var correctPiece = [
-        [0, 1, 0, 0],
-        [0, 1, 0, 0],
-        [0, 1, 0, 0],
-        [0, 1, 0, 0],
-    ];
+describe("Figura I",
+    function() {
+        var correctPiece = [
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+        ];
 
-    it("Figura I powinna byc figurą I",function() {
-        
-        expect(piece).toEqual(correctPiece);
-    })
-})
+        var piece = createPiece('I');
 
-describe("Figura L", function () {
-    var piece = createPiece('L');
-    var correctPiece = [
-        [0, 2, 0],
-        [0, 2, 0],
-        [0, 2, 2],
-    ];
+        it("Figura I powinna byc figurą I",
+            function() {
 
-    it("Figura L powinna byc figurą L", function () {
+                expect(piece).toEqual(correctPiece);
+            });
+    });
 
-        expect(piece).toEqual(correctPiece);
-    })
-})
+describe("Figura L",
+    function() {
+        var correctPiece = [
+            [0, 2, 0],
+            [0, 2, 0],
+            [0, 2, 2],
+        ];
 
-describe("Figura J", function () {
-    var piece = createPiece('J');
-    var correctPiece = [
-        [0, 3, 0],
-        [0, 3, 0],
-        [3, 3, 0],
-    ];
+        var piece = createPiece('L');
 
-    it("Figura J powinna byc figurą J", function () {
+        it("Figura L powinna byc figurą L",
+            function() {
 
-        expect(piece).toEqual(correctPiece);
-    })
-})
+                expect(piece).toEqual(correctPiece);
+            });
+    });
 
-describe("Figura O", function () {
-    var piece = createPiece('O');
-    var correctPiece = [
-        [4, 4],
-        [4, 4],
-    ];
+describe("Figura J",
+    function() {
 
-    it("Figura O powinna byc figurą O", function () {
+        var correctPiece = [
+            [0, 3, 0],
+            [0, 3, 0],
+            [3, 3, 0],
+        ];
 
-        expect(piece).toEqual(correctPiece);
-    })
-})
+        var piece = createPiece('J');
+
+        it("Figura J powinna byc figurą J",
+            function() {
+
+                expect(piece).toEqual(correctPiece);
+            });
+    });
+
+describe("Figura O",
+    function() {
+
+        var correctPiece = [
+            [4, 4],
+            [4, 4],
+        ];
+
+        var piece = createPiece('O');
+
+        it("Figura O powinna byc figurą O",
+            function() {
+
+                expect(piece).toEqual(correctPiece);
+            });
+    });
 
 describe("Figura Z", function () {
-    var piece = createPiece('Z');
+   
     var correctPiece = [
         [5, 5, 0],
         [0, 5, 5],
         [0, 0, 0],
     ];
 
-    it("Figura Z powinna byc figurą Z", function () {
+    var piece = createPiece('Z');
 
-        expect(piece).toEqual(correctPiece);
-    })
-})
+    it("Figura Z powinna byc figurą Z",
+        function() {
 
-describe("Figura S", function () {
-    var piece = createPiece('S');
-    var correctPiece = [
-        [0, 6, 6],
-        [6, 6, 0],
-        [0, 0, 0],
-    ];
+            expect(piece).toEqual(correctPiece);
+        });
+});
 
-    it("Figura S powinna byc figurą S", function () {
+describe("Figura S",
+    function() {
 
-        expect(piece).toEqual(correctPiece);
-    })
-})
+        var correctPiece = [
+            [0, 6, 6],
+            [6, 6, 0],
+            [0, 0, 0],
+        ];
 
-describe("Figura T", function () {
-    var piece = createPiece('T');
-    var correctPiece = [
-        [0, 7, 0],
-        [7, 7, 7],
-        [0, 0, 0],
-    ];
+        var piece = createPiece('S');
 
-    it("Figura T powinna byc figurą T", function () {
+        it("Figura S powinna byc figurą S",
+            function() {
 
-        expect(piece).toEqual(correctPiece);
-    })
-})
+                expect(piece).toEqual(correctPiece);
+            });
+    });
+
+describe("Figura T",
+    function() {
+
+        var correctPiece = [
+            [0, 7, 0],
+            [7, 7, 7],
+            [0, 0, 0],
+        ];
+
+        var piece = createPiece('T');
+
+        it("Figura T powinna byc figurą T",
+            function() {
+
+                expect(piece).toEqual(correctPiece);
+            });
+    });
 
