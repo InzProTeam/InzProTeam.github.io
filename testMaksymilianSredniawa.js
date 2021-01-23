@@ -1,4 +1,5 @@
 ﻿/// <reference path="../js/tetris.js" />
+/// <reference path="../scripts/jasmine/jasmine.js" />
 
 describe("Figura I", function () {
     var piece = createPiece('I');
